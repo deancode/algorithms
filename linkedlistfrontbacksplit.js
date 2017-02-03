@@ -26,10 +26,10 @@ function frontBackSplit(source, front, back) {
     current = current.next;
   }
 
-  back.data = node.next.data;
-  back.next = node.next.next;
-  node.next = null;
-  
+  back.data = current.next.data;
+  back.next = current.next.next;
+  current.next = null;
+
   front.data = source.data;
   front.next = source.next;
 }
